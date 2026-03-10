@@ -32,6 +32,12 @@ jobs:
         working-directory: Launcher
         run: chmod +x gradlew
 
+      - name: Remove Google Services plugin
+        working-directory: Launcher
+        run: |
+          sed -i "s/apply plugin: 'com.google.gms.google-services'//g" App/build.gradle
+          sed -i "s/apply plugin: 'com.google.firebase.crashlytics'//g" App/build.gradle
+
       - name: Build debug APK
         working-directory: Launcher
         run: ./gradlew assembleDebug
