@@ -40,6 +40,14 @@ jobs:
           sed -i "s/apply plugin: 'com.google.gms.google-services'//g" App/build.gradle
           sed -i "s/apply plugin: 'com.google.firebase.crashlytics'//g" App/build.gradle
 
+      - name: Patch IconLoader - remove missing drawables
+        run: |
+          FILE="Launcher/App/src/main/java/com/threethan/launchercore/metadata/IconLoader.java"
+          sed -i "/R\.drawable\.ai_google/d" $FILE
+          sed -i "/R\.drawable\.ai_youtube/d" $FILE
+          sed -i "/R\.drawable\.ai_apkmirror/d" $FILE
+          sed -i "/R\.drawable\.ai_playstore/d" $FILE
+
       - name: Build debug APK
         working-directory: Launcher
         run: ./gradlew assembleDebug
