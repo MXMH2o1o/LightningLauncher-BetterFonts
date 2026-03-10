@@ -56,4 +56,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: LightningLauncher-debug
-          path: Launcher/App/build/outputs/apk/debug/*.apk
+          path: Launcher/App/build/outputs/apk/**/debug/*.apk
