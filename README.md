@@ -10,3 +10,6 @@ A fork of [LightningLauncher](https://github.com/threethan/LightningLauncher) wi
 ## Credits
 - Original app by [threethan](https://github.com/threethan/LightningLauncher)
 - Laziest AI user: [MXH | BLUE Saturn](https://t.me/mxmh2o1o)
+
+
+its not working btw
